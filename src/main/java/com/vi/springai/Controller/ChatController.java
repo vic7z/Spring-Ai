@@ -21,7 +21,7 @@ public class ChatController {
         return chatService.generateChatMessage(query);
     }
     @GetMapping("/chat/rag/{query}")
-    public String rag(@PathVariable String query) {
+    public Response rag(@PathVariable String query) {
         return chatService.generateChatFromDocs(query);
     }
 }
